@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 30% 98%;
+    --foreground: 20 15% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 15% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 15% 18%;
+
+    --primary: 345 35% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 25% 92%;
+    --secondary-foreground: 20 15% 30%;
+
+    --muted: 30 20% 95%;
+    --muted-foreground: 20 10% 52%;
+
+    --accent: 345 40% 90%;
+    --accent-foreground: 345 35% 40%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 345 35% 65%;
+
+    --radius: 0.25rem;
+
+    /* Brand custom tokens */
+    --blush: 345 50% 88%;
+    --blush-deep: 345 35% 65%;
+    --beige: 30 35% 88%;
+    --beige-light: 30 25% 95%;
+    --cream: 30 30% 98%;
+    --charcoal: 20 15% 18%;
+    --rose: 345 45% 72%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(345 50% 95%) 0%, hsl(30 35% 95%) 50%, hsl(0 0% 100%) 100%);
+    --gradient-card: linear-gradient(180deg, transparent 50%, hsl(20 15% 18% / 0.7) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(345 45% 72%), hsl(345 35% 60%));
+
+    --shadow-soft: 0 4px 24px -4px hsl(345 35% 65% / 0.15);
+    --shadow-card: 0 2px 16px -2px hsl(20 15% 18% / 0.08);
+    --shadow-elevated: 0 8px 40px -8px hsl(20 15% 18% / 0.12);
+
+    --sidebar-background: 30 25% 97%;
+    --sidebar-foreground: 20 15% 18%;
+    --sidebar-primary: 345 35% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 345 40% 90%;
+    --sidebar-accent-foreground: 345 35% 40%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 345 35% 65%;
+  }
+
+  .dark {
+    --background: 20 15% 10%;
+    --foreground: 30 20% 95%;
+    --card: 20 12% 13%;
+    --card-foreground: 30 20% 95%;
+    --popover: 20 12% 13%;
+    --popover-foreground: 30 20% 95%;
+    --primary: 345 35% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 12% 18%;
+    --secondary-foreground: 30 20% 85%;
+    --muted: 20 12% 18%;
+    --muted-foreground: 30 10% 55%;
+    --accent: 345 25% 25%;
+    --accent-foreground: 345 40% 80%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 20 12% 22%;
+    --input: 20 12% 22%;
+    --ring: 345 35% 65%;
+    --sidebar-background: 20 15% 8%;
+    --sidebar-foreground: 30 20% 95%;
+    --sidebar-primary: 345 35% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 345 25% 20%;
+    --sidebar-accent-foreground: 345 40% 80%;
+    --sidebar-border: 20 12% 22%;
+    --sidebar-ring: 345 35% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-body {
+    font-family: 'Jost', sans-serif;
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
